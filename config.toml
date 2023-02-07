@@ -1,5 +1,5 @@
-baseURL = "https://tailbliss.netlify.app/"
-title = "TailBliss"
+baseURL = "https://dom-fung.com/"
+title = "DomFung"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
@@ -13,14 +13,14 @@ darkmode_js = ["assets/js/darkmode.js"]
 enableInlineShortcodes = true
 
 [params]
-author = "Nusser Studios"
+author = "DomFung"
 authorimage = "../assets/images/global/author.webp"
 github = "https://github.com/nusserstudios"
 facebook = "https://facebook.com/nusserstudios"
 og_image = "/images/tailbliss-cover.png"
-sitename = "TailBliss"
-twitter = "@nusserstudios"
-description = "TailBliss is Hugo Starter"
+sitename = "DomFung"
+twitter = "@domfung"
+description = "DomFung is a Full Stack Developer"
 
 [markup]
 [markup.goldmark]
