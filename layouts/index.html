@@ -32,7 +32,7 @@
                       Developer & Software Engineer based out of Toronto 🇨🇦<br />
                     </p>
                     <p class="max-w-xl mx-auto mb-6 font-normal text-gray-900 lg:mx-0 xl:mb-2 md:text-lg xl:text-xl dark:text-gray-50">
-                      I 🧡 all things tech, have a doggo that I love, <i>Nori</i> 🐶 & play the guitar 🎸. 
+                      I 🧡 all things tech, have a doggo named <i>Nori</i> 🐶 & play the guitar 🎸. 
                       I'm an expert in the React Ecosystem, recently started writing my own npm packages.
                     </p>
                     <p class="max-w-xl mx-auto mb-6 font-normal text-gray-900 lg:mx-0 xl:mb-2 md:text-lg xl:text-xl dark:text-gray-50">
@@ -58,7 +58,9 @@
     <div class="relative my-4">
       <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
           <div class="relative sm:py-8 lg:py-0">
-            <h1 class="pt-6 text-3xl sm:text-5xl font-bold tracking-tight text-gray-900 capitalize dark:text-gray-50">Projects!</h1>
+            <h1 class="mt-12 text-3xl sm:text-5xl font-bold tracking-tight text-gray-900 capitalize dark:text-gray-50">
+              > Projects |
+            </h1>
           </div>
       </div>
     </div>
@@ -92,11 +94,14 @@
                         <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
                              class="absolute inset-0 object-cover w-full h-full" alt="TailBliss - Our Mission"
                              loading="lazy" />
-                        {{ end }}>
+                        {{ end }}
                         {{ end }}
                         <div class="relative px-8">
                             <div>
-                                <img class="h-12" src="images/tailbliss-white.svg" alt="Workcation">
+                                {{ $logo1 := resources.Get "images/pages/ai-apparel-logo.png" }}
+                                {{ with $logo1 }}
+                                <img imgh class="h-12" src="{{ .RelPermalink }}" alt="Workcation">
+                                {{ end }}
                             </div>
                         </div>
                     </div>
@@ -135,31 +140,29 @@
                 <div class="md:mt-8">
                     <div class="mt-6 sm:max-w-xl">
                         <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-                            Just in time for Hacktoberfest with JIT Tailwind.
+                            Oslyn &nbsp; | &nbsp; Your Digital Bandmate
                         </h1>
-                        <p class="pb-12 mt-6 text-lg text-gray-900 dark:text-white">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at purus non enim commodo
-                            tincidunt vel in nulla. Aenean pretium dolor non ultricies bibendum. Etiam quis blandit
-                            enim. Nunc condimentum ut lorem in faucibus. Phasellus varius ligula et commodo tristique.
-                            Nunc sodales nisl nec
-                            laoreet vehicula. Donec velit nibh, sollicitudin at nulla a, egestas dignissim eros. Sed
-                            lacinia hendrerit interdum.
-                            Vestibulum pellentesque sem venenatis nisl tempor accumsan sit amet tempus felis. Mauris leo
-                            diam, porttitor nec
-                            bibendum id, tempus ac nulla. Etiam congue ornare erat at convallis. Donec in nisi dapibus,
-                            mattis risus vel, imperdiet enim. Donec
-                            fermentum sit amet tortor nec tincidunt. Nam nec lectus tortor. Nunc sit amet laoreet orci,
-                            porta ornare massa. Phasellus
-                            eget lorem mi. Nam eleifend ultricies sapien, quis mollis leo bibendum at. Quisque viverra
-                            lorem sit amet magna aliquet, et dignissim arcu eleifend.
+                        <p class="mt-7 text-lg leading-7 text-gray-900 dark:text-white">
+                          Oslyn.io is an app looking to change the way we make music! Under the hood, 
+                          she's an AI (Tensorflow) that provides real time accompaniment to musicians playing their favourite instrument.
+                        </p>
+                        <p class="mt-7 text-lg leading-7 text-gray-900 dark:text-white">
+                          We prioritized serverless architecture, lowering cost and enabling unlimited* scalability (S3, Appsync, AWS-amplify, dynamoDB). 
+                          We chose to use the React ecosystem for both our app and website (React-Native/Reactjs) for code consistency and reusability. 
+                          Since our app responds in real-time, we decided to write the audio layer in Java/Swift and take advantage of the native performance gains on Android and iOS platforms respectively. 
+                          The AI model also resides within the native code.
+                        </p><p class="mt-7 text-lg leading-7 text-gray-900 dark:text-white">
+                          We utilize AWS Sagemaker as the our training platform, kicking off ML training instances via Python on Jupyter notebooks within the environment! 
+                          Our original architecture utilizes Pytorch & Pytorch mobile, but due to dependency conflicts with React-native, we migrated the models to Tensorflow & TFlite. 
+                          Due to the serial nature of music, we're using research on recurrent neural networks as the bases of our AI model.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
-            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <div class="sm:mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
+            <div class="md:pr-24 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
                 <div class="hidden sm:block">
                     <div
                          class="absolute inset-y-0 w-screen left-1/2 rounded-l-3xl bg-gray-50 dark:bg-gray-900/10 lg:left-80 lg:right-0 lg:w-full">
@@ -177,20 +180,16 @@
                     </svg>
                 </div>
                 <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
-                    {{ $heroOne := resources.GetMatch "images/pages/hacktoberfest.jpg" }}
+                  <div class="relative overflow-hidden h-full rounded-2xl">
+                    {{ $heroOne := resources.GetMatch "images/pages/phone-mockup-loop.png" }}
 
-                    {{ $tiny := ($heroOne.Fit "480x280 q80") }}
-                    {{ $small := ($heroOne.Fit "768x280 q80") }}
-                    {{ $medium := ($heroOne.Fit "1024x280 q80") }}
-                    {{ $large := ($heroOne.Fit "1374x1000 q80") }}
+                    {{ with $heroOne }}
 
-                    <img srcset="
-                        {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
-                        {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
-                        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
-                        {{- with $large.RelPermalink -}}, {{.}} 1374w{{- end -}}" src="{{ $heroOne.RelPermalink }}"
-                         alt="TailBliss Hacktoberfest Image"
-                         class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
+                    <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+                          class="absolute inset-0 object-scale-down w-full h-full" alt="TailBliss - Our Mission"
+                          loading="lazy" />
+                    {{ end }}
+                  </div>
                 </div>
             </div>
         </div>

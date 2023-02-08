@@ -15,8 +15,8 @@ enableInlineShortcodes = true
 [params]
 author = "DomFung"
 authorimage = "../assets/images/global/author.webp"
-github = "https://github.com/nusserstudios"
-facebook = "https://facebook.com/nusserstudios"
+github = "https://github.com/DominicFung"
+facebook = "https://www.facebook.com/fung.dominic"
 og_image = "/images/tailbliss-cover.png"
 sitename = "DomFung"
 twitter = "@domfung"
