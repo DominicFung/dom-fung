@@ -29,5 +29,5 @@ I don't know if I will be able to keep to any of these goals but It's Jan 1st *.
 
 ## 2023 projects! (plan)
 
-
+ .. All things AI. With the 
 
